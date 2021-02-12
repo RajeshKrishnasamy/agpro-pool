@@ -9,7 +9,7 @@ export class TransactionListService {
   constructor(private httpClient: HttpClient) { }
 
   public getList() {
-    return this.httpClient.get("http://localhost:3000/farmers");
+    return this.httpClient.get("http://localhost:3000/card-list");
   }
 
 }

@@ -8,5 +8,6 @@ export class VillageSearchService {
   constructor(private httpClient: HttpClient) { }
   public getList() {
     return this.httpClient.get("http://localhost:3000/villages");
+    
   }
 }

@@ -1,18 +1,21 @@
-<form [formGroup]="farmerForm" (ngSubmit)="onFarmerSubmit()">
+<form [formGroup]="farmerForm" (ngSubmit)="onFarmerSubmit()" novalidate>
     <div class="form-group">
-      <label for="name">Ename</label>
+      <label for="name">Farmer Name</label>
       <input type="text" class="form-control" formControlName="name" required>
     </div>
     <div class="form-group">
         <label for="name">Village</label>
         <select formControlName="village" class="form-control" (change)="changeVillage($event)">
-            <option disabled>Select farmer</option>
+            <option disabled>Select Village</option>
             <option *ngFor="let village of villageList">{{village.name}}</option>
-          </select>
+        </select>
     </div>
     <div class="form-group">
         <label for="name">Age</label>
         <input type="text" class="form-control" formControlName="age" required>
+        <div *ngIf="submitted && f.age.errors" class="invalid-feedback">
+          <div *ngIf="f.age.errors.required">Title is required</div>
+      </div>
     </div>
     <div class="form-group">
         <label for="name">gender</label>

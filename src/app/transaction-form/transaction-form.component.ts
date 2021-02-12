@@ -16,25 +16,36 @@ export class TransactionFormComponent implements OnInit {
   SERVER_URL = "http://localhost:3000/transactions";
   farmerList: any = [];
   cropList: any = [];
+  todayDate : Date = new Date();
     
   constructor(private formBuilder: FormBuilder, private httpClient: HttpClient, private _router: Router, private farmerSearchService: FarmerSearchService, private cropSearchService: CropSearchService) { 
+    
       this.farmerSearchService.getList().subscribe(
-        (res) => {
-          this.farmerList=res;
-        },
-        (err) => console.log(err)      
+          (res) => {
+            this.farmerList=res;
+            localStorage.setItem('farmers', JSON.stringify(this.farmerList));
+          },
+          (err) => {
+            this.farmerList = JSON.parse(localStorage.getItem('farmers') || '[]');
+            console.log(err);
+          }      
       );
       this.cropSearchService.getList().subscribe(
         (res) => {
           this.cropList=res;
+          localStorage.setItem('crops', JSON.stringify(this.cropList));
         },
-        (err) => console.log(err)
+        (err) => {
+          this.farmerList = JSON.parse(localStorage.getItem('crops') || '[]');
+          console.log(err);
+        }
       );
   }
   ngOnInit(): void {
   }
 
   transactionForm = this.formBuilder.group({
+    date:  new Date().toISOString().slice(0,10),
     name: ['', Validators.required],
     crop: ['', Validators.required],
     quantity: ['', Validators.required],

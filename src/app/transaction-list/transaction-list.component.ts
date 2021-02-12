@@ -14,11 +14,16 @@ export class TransactionListComponent implements OnInit {
 
   ngOnInit(): void {
     this.transactionListService.getList().subscribe(
-      (res) => {
-        this.transactionList=res;
-      },
-      (err) => console.log(err)
-      );
+        (res) => {
+          this.transactionList=res;
+          console.log(this.transactionList);
+          localStorage.setItem('transactions', JSON.stringify(this.transactionList));
+        },
+        (err) => {
+          this.transactionList = JSON.parse(localStorage.getItem('transactions') || '[]');
+          console.log(err);
+        }
+    )
   }
 
 }

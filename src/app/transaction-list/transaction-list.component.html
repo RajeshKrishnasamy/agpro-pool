@@ -1,28 +1,25 @@
-<a [routerLink]="['/transaction-from']">Transaction Form</a>
-<a [routerLink]="['/farmer-form']">Farmer Form</a>
-    <div class="d-flex flex-row">
-        <div class="col-md-6 col-xl-3">
-            <div class="card m-b-30"  *ngFor="let transaction of transactionList">
+    <div class="cards">
+        <div class="col-md-6 col-xl-3" *ngFor="let transaction of transactionList">
+            <div class="card m-b-30" >
                 <div class="card-body row">
                     <div class="col-6">
                         <a href=""><img src="assets/images/no-image.png" alt="" class="img-fluid rounded-circle w-60"></a>
                     </div>
                     <div class="col-6 card-title align-self-center mb-0">
-                        <h5>{{transaction.name}}</h5>
-                        <p class="m-0">Age: {{transaction.age}}</p>
+                        <h5>{{transaction.farmer}}</h5>
+                        <p class="m-0">Date: {{ transaction.date | date}}</p>
                     </div>
                 </div>
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item"><i class="fa fa-home float-right"></i>Village : {{transaction.village}}</li>
-                    <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{transaction.phone}}</li>
+                    <li class="list-group-item"><i class="fa fa-phone float-right"></i>Phone : {{transaction.contact_number}}</li>
                 </ul>
-                <!--
                 <div class="card-body">
-                    <ul class="list-group" *ngFor="let data of item.data">
-                        <li class="list-group-item">{{transaction.crop}} -  {{transaction.quantity}}</li>
+                    <ul class="list-group" *ngFor="let crop of transaction.data">
+                        <li class="list-group-item">{{crop.crop}} -  {{crop.quantity}}</li>
                     </ul>
                 </div>
-                -->
             </div>
         </div>
     </div>
+

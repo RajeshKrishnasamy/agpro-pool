@@ -10,7 +10,7 @@
     },
     {
       "name": "apple",
-      "id": 2
+      "id": 3
     }
   ],
   "villages": [
@@ -24,7 +24,7 @@
     },
     {
       "name": "maysore",
-      "id": 2
+      "id": 3
     }
   ],
   "farmers": [
@@ -91,26 +91,143 @@
       "phone": "4785",
       "photo": "",
       "id": 7
+    },
+    {
+      "name": "prabha",
+      "village": "maysore",
+      "age": "45",
+      "gender": "Female",
+      "phone": "54561",
+      "photo": "",
+      "id": 8
     }
   ],
   "transactions": [
     {
-      "name": "nila",
-      "crop": "carrot",
-      "quantity": "12",
-      "id": 1
-    },
-    {
+      "date": "2021-02-12",
       "name": "Kanna",
-      "crop": "banana",
-      "quantity": "12",
-      "id": 2
+      "crop": "apple",
+      "quantity": "123",
+      "id": 6
     },
     {
+      "date": "2021-02-12",
       "name": "kumar",
       "crop": "banana",
-      "quantity": "12",
-      "id": 3
+      "quantity": "13",
+      "id": 7
+    },
+    {
+      "date": "2021-02-12",
+      "name": "kumar",
+      "crop": "1",
+      "quantity": "123",
+      "id": 8
+    },
+    {
+      "date": "2021-02-12",
+      "name": "2",
+      "crop": "1",
+      "quantity": "34",
+      "id": 9
+    }
+  ],
+  "card-list": [
+    {
+      "date": "20 September 2020",
+      "farmer": "testing6",
+      "village": "testing",
+      "contact_number": "99911223344",
+      "data": [
+        {
+          "crop": "Cauliflower",
+          "quantity": "6"
+        },
+        {
+          "crop": "Blueberries",
+          "quantity": "5"
+        }
+      ]
+    },
+    {
+      "date": "20 September 2020",
+      "farmer": "testing5",
+      "village": "testing",
+      "contact_number": "99911223344",
+      "data": [
+        {
+          "crop": "Cauliflower",
+          "quantity": "20"
+        },
+        {
+          "crop": "Carrot",
+          "quantity": "30"
+        }
+      ]
+    },
+    {
+      "date": "20 September 2020",
+      "farmer": "testing4",
+      "village": "testing",
+      "contact_number": "99911223344",
+      "data": [
+        {
+          "crop": "Cauliflower",
+          "quantity": "16"
+        },
+        {
+          "crop": "Onion",
+          "quantity": "40"
+        }
+      ]
+    },
+    {
+      "date": "20 September 2020",
+      "farmer": "testing3",
+      "village": "testing",
+      "contact_number": "99911223344",
+      "data": [
+        {
+          "crop": "Cauliflower",
+          "quantity": "20"
+        },
+        {
+          "crop": "Onion",
+          "quantity": "30"
+        }
+      ]
+    },
+    {
+      "date": "20 September 2020",
+      "farmer": "testing1",
+      "village": "testing",
+      "contact_number": "99911223344",
+      "data": [
+        {
+          "crop": "Cauliflower",
+          "quantity": "7"
+        },
+        {
+          "crop": "Banana",
+          "quantity": "30"
+        }
+      ]
+    },
+    {
+      "date": "20 September 2020",
+      "farmer": "testing2",
+      "village": "testing",
+      "contact_number": "99911223344",
+      "data": [
+        {
+          "crop": "Cauliflower",
+          "quantity": "20"
+        },
+        {
+          "crop": "Fig",
+          "quantity": "15"
+        }
+      ]
     }
   ]
 }
