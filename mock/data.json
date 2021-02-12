@@ -1,0 +1,116 @@
+{
+  "crops": [
+    {
+      "name": "banana",
+      "id": 1
+    },
+    {
+      "name": "carrot",
+      "id": 2
+    },
+    {
+      "name": "apple",
+      "id": 2
+    }
+  ],
+  "villages": [
+    {
+      "name": "dindigul",
+      "id": 1
+    },
+    {
+      "name": "madurai",
+      "id": 2
+    },
+    {
+      "name": "maysore",
+      "id": 2
+    }
+  ],
+  "farmers": [
+    {
+      "name": "Rajesh",
+      "village": "Dindigul",
+      "age": "12",
+      "gender": "Male",
+      "phone": "9731098260",
+      "photo": "C:\\fakepath\\no-image.png",
+      "file": {},
+      "id": 1
+    },
+    {
+      "name": "Kanna",
+      "village": "madurai",
+      "age": "13",
+      "gender": "male",
+      "phone": "789456123",
+      "photo": "",
+      "id": 2
+    },
+    {
+      "name": "kumar",
+      "village": "maysore",
+      "age": "12",
+      "gender": "male",
+      "phone": "45789",
+      "photo": "",
+      "id": 3
+    },
+    {
+      "name": "nila",
+      "village": "dindigul",
+      "age": "13",
+      "gender": "male",
+      "phone": "7412584578",
+      "photo": "",
+      "id": 4
+    },
+    {
+      "name": "mani",
+      "village": "madurai",
+      "age": "34",
+      "gender": "male",
+      "phone": "7845",
+      "photo": "",
+      "id": 5
+    },
+    {
+      "name": "vaani",
+      "village": "maysore",
+      "age": "12",
+      "gender": "male",
+      "phone": "45789",
+      "photo": "",
+      "id": 6
+    },
+    {
+      "name": "test",
+      "village": "madurai",
+      "age": "12",
+      "gender": "male",
+      "phone": "4785",
+      "photo": "",
+      "id": 7
+    }
+  ],
+  "transactions": [
+    {
+      "name": "nila",
+      "crop": "carrot",
+      "quantity": "12",
+      "id": 1
+    },
+    {
+      "name": "Kanna",
+      "crop": "banana",
+      "quantity": "12",
+      "id": 2
+    },
+    {
+      "name": "kumar",
+      "crop": "banana",
+      "quantity": "12",
+      "id": 3
+    }
+  ]
+}

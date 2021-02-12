@@ -1,0 +1,36 @@
+<form [formGroup]="farmerForm" (ngSubmit)="onFarmerSubmit()">
+    <div class="form-group">
+      <label for="name">Ename</label>
+      <input type="text" class="form-control" formControlName="name" required>
+    </div>
+    <div class="form-group">
+        <label for="name">Village</label>
+        <select formControlName="village" class="form-control" (change)="changeVillage($event)">
+            <option disabled>Select farmer</option>
+            <option *ngFor="let village of villageList">{{village.name}}</option>
+          </select>
+    </div>
+    <div class="form-group">
+        <label for="name">Age</label>
+        <input type="text" class="form-control" formControlName="age" required>
+    </div>
+    <div class="form-group">
+        <label for="name">gender</label>
+        <input type="text" class="form-control" formControlName="gender" required>
+    </div>
+    <div class="form-group">
+        <label for="name">Phone</label>
+        <input type="text" class="form-control"  formControlName="phone" required>
+    </div>
+    <div class="form-group">
+        <label for="name">Photo</label>
+        <input type="file" class="form-control-file"  formControlName="phone" formControlName="photo" (change)="onFileSelect($event)">
+    </div>
+
+    <button type="submit" [disabled]="!farmerForm.valid" class="btn btn-primary">Submit</button>
+  </form>
+
+  <p>
+    Form Status: {{ farmerForm.status }}
+  </p>
+
